@@ -1,0 +1,71 @@
+/*
+ ============================================================================
+ Name        : 2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int i;
+	int numero;
+	int numerosPar;
+	int numerosImpar;
+	int flagMayor;
+	int numeroMenor;
+	int numeroMayorPar;
+
+	numerosPar = 0;
+	numerosImpar = 0;
+	i = 0;
+	flagMayor = 0;
+
+
+	for(int i;i<10;i++)
+	{
+		printf("Ingrese el numero");
+		scanf("%d", &numero);
+
+		if(numero % 2 == 0)
+		{
+			numerosPar++;
+			numeroMayorPar = numero;
+		}
+		else if(numero % 2 == 1)
+		{
+			numerosImpar++;
+		}
+
+		if(flagMayor == 1)
+		{
+			numeroMenor = numero;
+			flagMayor = 0;
+		}
+
+		if(numeroMenor >= numero)
+		{
+			numeroMenor = numero;
+		}
+
+		if(numero % 2 == 0 && numeroMayorPar < numero)
+		{
+			numeroMayorPar = numero;
+		}
+
+	}
+
+		printf("La cantidad de numeros pares es: %d", &numerosPar);
+		printf("La cantidad de numeros impares es: %d", &numerosImpar);
+		printf("El menor numero ingresado es: %d", &numeroMenor);
+		printf("El mayor numero par es: %d", &numeroMayorPar);
+
+
+	return EXIT_SUCCESS;
+}

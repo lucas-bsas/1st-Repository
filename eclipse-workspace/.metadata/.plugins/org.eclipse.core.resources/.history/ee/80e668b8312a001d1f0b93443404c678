@@ -1,0 +1,117 @@
+/*
+ ============================================================================
+ Name        : 3.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numeroCliente;
+	char estadoCivil;
+	int edad;
+	int temperatura;
+	char genero;
+	const PRECIO = 600;
+	int i;
+
+	int contadorMas60;
+	int contadorViudos;
+	int solteraMasJoven;
+	int numeroClienteSolteraJoven;
+
+	int precioTotal;
+	int precioFinal;
+
+	char controles;
+
+	i = 0;
+	contadorMas60 = 0;
+	contadorViudos = 0;
+	solteraMasJoven = 999;
+
+	do
+
+	{
+		printf("Ingrese el nro. de cliente");
+		scanf("%d", &numeroCliente);
+		fflush(stdin);
+
+
+	do
+	{
+		printf("Ingrese el estado civil: s / c / v");
+		scanf("%c", &estadoCivil);
+		fflush(stdin);
+	}
+	while(estadoCivil != "s" || estadoCivil != "c" || estadoCivil != "v");
+
+	do
+	{
+		printf("Ingrese la edad.");
+		scanf("%d", &edad);
+		fflush(stdin);
+	}
+	while(edad < 17);
+
+	do
+	{
+		printf("Ingrese la temperatura corporal.");
+		scanf("%d", &temperatura);
+		fflush(stdin);
+	}
+	while(temperatura < 33);
+
+	do
+	{
+		printf("Ingrese el genero: f / m / o");
+		scanf("%c", &genero);
+		fflush(stdin);
+	}
+	while(genero != "f" || genero != "m" || genero != "o");
+
+
+		if(edad > 60)
+		{
+			contadorMas60++;
+		}
+		else if(estadoCivil == "v")
+		{
+			contadorViudos++;
+		}
+
+
+		if(genero == "f" && edad < solteraMasJoven)
+		{
+		solteraMasJoven = edad;
+		numeroClienteSolteraJoven = numeroCliente;
+		}
+
+		printf("Seguir agregando pasajeros? s/n);
+		scanf("%c", &controles);
+	}while (controles != "n");
+
+	}
+		printf("Hay registradas %d personas mayores de 60 años, de estado civil viudo", contadorViudos);
+
+		printf("La mujer soltera mas joven registrada tiene %d años y nro de cliente %d", solteraMasJoven, numeroClienteSolteraJoven);
+
+		precioTotal = precio * 10;
+		printf("El  precio total a pagar sin descuento es de: $ %d", precioTotal);
+
+		if((contadorMas60 * 100 / 10) >= 50)
+		{
+			precioFinal = precioTotal * 0.75;
+			printf("El precio final con descuento del %25 es de: $ %d", precioFinal);
+
+		}
+
+	return EXIT_SUCCESS;
+}

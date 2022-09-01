@@ -1,0 +1,28 @@
+/*
+ ============================================================================
+ Name        : Holamundo.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numero1;
+	int numero2;
+	int numero3;
+	int numeroMedio;
+
+	printf("Ingrese el primer numero: %d", numero1);
+	scanf("%d", &numero1);
+
+
+
+	return EXIT_SUCCESS;
+}

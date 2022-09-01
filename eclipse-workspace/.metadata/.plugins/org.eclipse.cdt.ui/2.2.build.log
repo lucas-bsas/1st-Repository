@@ -1,0 +1,35 @@
+22:21:51 **** Incremental Build of configuration Debug for project 2.2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\2.2.o" "..\\src\\2.2.c" 
+..\src\2.2.c: In function 'main':
+..\src\2.2.c:62:46: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+   62 |    printf("La cantidad de numeros pares es: %d", &numerosPar);
+      |                                             ~^   ~~~~~~~~~~~
+      |                                              |   |
+      |                                              int int *
+      |                                             %n
+..\src\2.2.c:63:48: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+   63 |    printf("La cantidad de numeros impares es: %d", &numerosImpar);
+      |                                               ~^   ~~~~~~~~~~~~~
+      |                                                |   |
+      |                                                int int *
+      |                                               %n
+..\src\2.2.c:64:43: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+   64 |    printf("El menor numero ingresado es: %d", &numeroMenor);
+      |                                          ~^   ~~~~~~~~~~~~
+      |                                           |   |
+      |                                           int int *
+      |                                          %n
+..\src\2.2.c:65:37: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+   65 |    printf("El mayor numero par es: %d", &numeroMayorPar);
+      |                                    ~^   ~~~~~~~~~~~~~~~
+      |                                     |   |
+      |                                     int int *
+      |                                    %n
+..\src\2.2.c:17:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   17 |  int i;
+      |      ^
+gcc -o 2.2.exe "src\\2.2.o" 
+
+22:21:56 Build Finished. 0 errors, 5 warnings. (took 4s.546ms)
+

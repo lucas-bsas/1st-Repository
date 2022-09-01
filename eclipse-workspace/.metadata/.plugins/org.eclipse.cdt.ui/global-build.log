@@ -1,0 +1,78 @@
+17:27:22 **** Incremental Build of configuration Debug for project 2.3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\2.3.o" "..\\src\\2.3.c" 
+..\src\2.3.c: In function 'main':
+..\src\2.3.c:35:12: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   35 |  controles = "s";
+      |            ^
+..\src\2.3.c:54:20: warning: comparison between pointer and integer
+   54 |  while(estadoCivil != "s" || estadoCivil != "c" || estadoCivil != "v");
+      |                    ^~
+..\src\2.3.c:54:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:54:42: warning: comparison between pointer and integer
+   54 |  while(estadoCivil != "s" || estadoCivil != "c" || estadoCivil != "v");
+      |                                          ^~
+..\src\2.3.c:54:42: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:54:64: warning: comparison between pointer and integer
+   54 |  while(estadoCivil != "s" || estadoCivil != "c" || estadoCivil != "v");
+      |                                                                ^~
+..\src\2.3.c:54:64: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:78:15: warning: comparison between pointer and integer
+   78 |  while(genero != "f" || genero != "m" || genero != "o");
+      |               ^~
+..\src\2.3.c:78:15: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:78:32: warning: comparison between pointer and integer
+   78 |  while(genero != "f" || genero != "m" || genero != "o");
+      |                                ^~
+..\src\2.3.c:78:32: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:78:49: warning: comparison between pointer and integer
+   78 |  while(genero != "f" || genero != "m" || genero != "o");
+      |                                                 ^~
+..\src\2.3.c:78:49: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:85:23: warning: comparison between pointer and integer
+   85 |   else if(estadoCivil == "v")
+      |                       ^~
+..\src\2.3.c:85:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:91:13: warning: comparison between pointer and integer
+   91 |   if(genero == "f" && edad < solteraMasJoven)
+      |             ^~
+..\src\2.3.c:91:13: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:100:19: warning: comparison between pointer and integer
+  100 |  while (controles != "n");
+      |                   ^~
+..\src\2.3.c:100:19: warning: comparison with string literal results in unspecified behavior [-Waddress]
+..\src\2.3.c:103:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+  103 |   printf("Hay registradas %d personas mayores de 60 años, de estado civil viudo", &contadorViudos);
+      |                           ~^                                                       ~~~~~~~~~~~~~~~
+      |                            |                                                       |
+      |                            int                                                     int *
+      |                           %n
+..\src\2.3.c:105:56: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+  105 |   printf("La mujer soltera mas joven registrada tiene %d años y nro de cliente %d", &solteraMasJoven, &numeroClienteSolteraJoven);
+      |                                                       ~^                             ~~~~~~~~~~~~~~~~
+      |                                                        |                             |
+      |                                                        int                           int *
+      |                                                       %n
+..\src\2.3.c:105:82: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int *' [-Wformat=]
+  105 |   printf("La mujer soltera mas joven registrada tiene %d años y nro de cliente %d", &solteraMasJoven, &numeroClienteSolteraJoven);
+      |                                                                                 ~^                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                  |                     |
+      |                                                                                  int                   int *
+      |                                                                                 %n
+..\src\2.3.c:108:60: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+  108 |   printf("El  precio total a pagar sin descuento es de: $ %d", &precioTotal);
+      |                                                           ~^   ~~~~~~~~~~~~
+      |                                                            |   |
+      |                                                            int int *
+      |                                                           %n
+..\src\2.3.c:113:49: warning: unknown conversion type character ' ' in format [-Wformat=]
+  113 |    printf("El precio final con descuento del %25 es de: $ %d", &precioFinal);
+      |                                                 ^
+..\src\2.3.c:113:60: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+  113 |    printf("El precio final con descuento del %25 es de: $ %d", &precioFinal);
+      |                                                           ~^   ~~~~~~~~~~~~
+      |                                                            |   |
+      |                                                            int int *
+      |                                                           %n
+gcc -o 2.3.exe "src\\2.3.o" 
+Info: Nothing to build for 2.3
